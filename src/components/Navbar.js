@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export default function Navbar(props) {
   return (
@@ -21,7 +22,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
             </li>
@@ -47,3 +48,15 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
+// Prop types defines property of props which is passed
+// In this case props.title will always be string type
+Navbar.propTypes = {
+    title: PropTypes.string.isRequired
+}
+
+// this function will automatically set value of title
+// if nothing is passed in props
+Navbar.defaultProps = {
+    title: 'Set title here'
+};
