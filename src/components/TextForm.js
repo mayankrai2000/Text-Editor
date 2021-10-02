@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
-    console.log("Upper Case Clicked");
-    setText("You have clicked on handleupClick")
+    let newText = text.toUpperCase();
+    setText(newText)
   };
-  const handleOnChange = () => {
-    console.log("On Change");
+
+  const handleOnChange = (event) => {
+    setText(event.target.value);
   };
+
   const [text, setText] = useState("Enter text here");
   return (
     <div>
@@ -27,5 +29,3 @@ export default function TextForm(props) {
     </div>
   );
 }
-
-// Testing git commit
