@@ -9,7 +9,7 @@ function App() {
   const [mode, setMode] = useState('light');
   return (
     <>
-      <Navbar title="News Overload" mode={mode}/>
+      <Navbar title="Text Editor" mode={mode}/>
       <div className="container my-3">
           <TextForm heading="Enter your text to analyze below"/>
           {/* <About /> */}
