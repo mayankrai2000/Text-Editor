@@ -1,3 +1,8 @@
+Run this proejct:
+1) Clone this repo
+2) npm install
+3) npm start
+
 Simple Editor built in React with following features:
 1) Convert text in upper case
 2) Convert text in lower case
