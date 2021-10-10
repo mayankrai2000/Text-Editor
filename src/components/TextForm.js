@@ -28,13 +28,14 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   return (
     <>
-      <div className="container">
+      <div className="container" style={{color: props.mode == 'dark'?'white':'black'}}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
-            className="form-control"
+            className={`form-control text-${props.mode == 'dark'?'light':'dark'}`}
             value={text}
             onChange={handleOnChange}
+            style={{backgroundColor: props.mode == 'dark'?'gray':'white'}}
             id="myBox"
             rows="8"
           ></textarea>
@@ -52,7 +53,7 @@ export default function TextForm(props) {
           Copy
         </button>
       </div>
-      <div className="container my-3">
+      <div className="container my-3" style={{color: props.mode == 'dark'?'white':'black'}}>
           <h2>Your text summary</h2>
           <p>{text.split(" ").length} words, {text.length} characters</p> 
           <p>{0.008*text.split(" ").length} Minutes Read</p>  

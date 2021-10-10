@@ -15,10 +15,12 @@ function App() {
       setMode("dark");
       setTextMode("Enable Light Mode");
       setTextColour("light");
+      document.body.style.backgroundColor = 'grey';
     } else {
       setMode("light");
       setTextMode("Enable Dark Mode");
       setTextColour("dark");
+      document.body.style.backgroundColor = 'white';
     }
   };
   return (
@@ -31,7 +33,7 @@ function App() {
         textColour={textColour}
       />
       <div className="container my-3">
-        <TextForm heading="Enter your text to analyze below" />
+        <TextForm heading="Enter your text to analyze below" mode={mode}/>
         {/* <About /> */}
       </div>
     </>
