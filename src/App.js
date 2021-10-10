@@ -6,9 +6,9 @@ import TextForm from "./components/TextForm";
 
 function App() {
   // whether dark mode is enabled or not
-  const [mode, setMode] = useState("dark");
-  const [textMode, setTextMode] = useState("Enable Light Mode");
-  const [textColour, setTextColour] = useState("light")
+  const [mode, setMode] = useState("light");
+  const [textMode, setTextMode] = useState("Enable Dark Mode");
+  const [textColour, setTextColour] = useState("dark")
 
   const toggleMode = () => {
     if (mode === "light") {
