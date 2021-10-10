@@ -58,7 +58,7 @@ export default function TextForm(props) {
           <p>{text.split(" ").length} words, {text.length} characters</p> 
           <p>{0.008*text.split(" ").length} Minutes Read</p>  
           <h2>Preview</h2>
-          <p>{text}</p>
+          <p>{text.length>0?text:"Enter something in text box to preview here"}</p>
       </div>
     </>
   );
