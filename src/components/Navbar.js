@@ -1,9 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export default function Navbar(props) {
   return (
-    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <nav
+      className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           {props.title}
@@ -32,7 +34,7 @@ export default function Navbar(props) {
               </a>
             </li>
           </ul>
-          <form className="d-flex">
+          {/* <form className="d-flex">
             <input
               className="form-control me-2"
               type="search"
@@ -42,7 +44,19 @@ export default function Navbar(props) {
             <button className="btn btn-primary" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
+          <div className={`form-check form-switch text-${props.textColour}`}>
+            <input
+              class="form-check-input"
+              onClick={props.toggleMode}
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault">
+              {props.textMode}
+            </label>
+          </div>
         </div>
       </div>
     </nav>
@@ -52,11 +66,11 @@ export default function Navbar(props) {
 // Prop types defines property of props which is passed
 // In this case props.title will always be string type
 Navbar.propTypes = {
-    title: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+};
 
 // this function will automatically set value of title
 // if nothing is passed in props
 Navbar.defaultProps = {
-    title: 'Set title here'
+  title: "Set title here",
 };
