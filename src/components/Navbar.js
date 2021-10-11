@@ -2,12 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Navbar(props) {
+  const darkMode = () => {
+    props.toggleMode("dark");
+  };
+  const lightMode = () => {
+    props.toggleMode("light");
+  };
+  const primaryMode = () => {
+    props.toggleMode("primary")
+  }
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className={`navbar-brand text-${props.textColour}`} href="/">
           {props.title}
         </a>
         <button
@@ -24,12 +33,12 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className={`nav-link active text-${props.textColour}`} aria-current="page" href="#">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className={`nav-link text-${props.textColour}`} href="/">
                 About
               </a>
             </li>
@@ -46,16 +55,29 @@ export default function Navbar(props) {
             </button>
           </form> */}
           <div className={`form-check form-switch text-${props.textColour}`}>
-            <input
+            <button type="button" class="btn btn-primary mx-3" onClick={primaryMode}>
+              Primary
+            </button>
+            <button
+              type="button"
+              class="btn btn-light mx-3"
+              onClick={lightMode}
+            >
+              Light
+            </button>
+            <button type="button" class="btn btn-dark" onClick={darkMode}>
+              Dark
+            </button>
+            {/* <input
               className="form-check-input"
               onClick={props.toggleMode}
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
-            />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            /> */}
+            {/* <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
               {props.textMode}
-            </label>
+            </label> */}
           </div>
         </div>
       </div>

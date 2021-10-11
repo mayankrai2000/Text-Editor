@@ -6,9 +6,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
 function App() {
-  // whether dark mode is enabled or not
   const [mode, setMode] = useState("light");
-  const [textMode, setTextMode] = useState("Enable Dark Mode");
   const [textColour, setTextColour] = useState("dark")
   const [alert, setAlert] = useState(null);
 
@@ -22,19 +20,22 @@ function App() {
     }, 1000);
   }
 
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("dark");
-      setTextMode("Enable Light Mode");
+  const toggleMode = (mode) => {
+    if (mode === 'dark') {
+      setMode(mode);
       setTextColour("light");
       document.body.style.backgroundColor = 'grey';
       showAlert("Dark mode has been enabled", "success")
-    } else {
-      setMode("light");
-      setTextMode("Enable Dark Mode");
+    } else if (mode === 'light') {
+      setMode(mode);
       setTextColour("dark");
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success")
+    } else if (mode === 'primary') {
+      setMode("primary");
+      setTextColour("light");
+      document.body.style.backgroundColor = 'pink';
+      showAlert("Primary mode has been enabled", "success")
     }
   };
   return (
@@ -43,7 +44,6 @@ function App() {
         title="Text Editor"
         mode={mode}
         toggleMode={toggleMode}
-        textMode={textMode}
         textColour={textColour}
       />
       <Alert alert={alert} />

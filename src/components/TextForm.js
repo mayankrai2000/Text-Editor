@@ -32,7 +32,7 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   return (
     <>
-      <div className="container" style={{color: props.mode === 'dark'?'white':'black'}}>
+      <div className="container" style={{color: props.textColour}}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
@@ -57,7 +57,7 @@ export default function TextForm(props) {
           Copy
         </button>
       </div>
-      <div className="container my-3" style={{color: props.mode === 'dark'?'white':'black'}}>
+      <div className="container my-3" style={{color: props.textColour}}>
           <h2>Your text summary</h2>
           <p>{text.split(" ").length} words, {text.length} characters</p> 
           <p>{0.008*text.split(" ").length} Minutes Read</p>  

@@ -9,5 +9,6 @@ Simple Editor built in React with following features:
 3) Clear text
 4) Copy text
 5) Real time preview feature
-6) Dark mode
+6) Dark mode / Light mode / Primary mode
 7) Alert message whenever you change mode
+8) Alert timeout
