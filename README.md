@@ -10,3 +10,4 @@ Simple Editor built in React with following features:
 4) Copy text
 5) Real time preview feature
 6) Dark mode
+7) Alert message whenever you change mode
