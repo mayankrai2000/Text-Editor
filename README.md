@@ -18,7 +18,8 @@ This is Text Editor build with React.js
 
 ```bash
 $ npm install # or yarn
-$ npm start
+$ npm start # For development
+$ npm run build # For production or hosting
 ```
 
 -   Open up localhost:3000 and start clicking around.
