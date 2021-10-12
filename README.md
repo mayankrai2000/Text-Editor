@@ -22,3 +22,31 @@ $ npm start
 ```
 
 -   Open up localhost:3000 and start clicking around.
+
+## :file_folder: File Structure
+
+-   Add a file structure here with the basic details about files, below is current file structure.
+
+```
+├── package.json
+├── package-lock.json
+├── public
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── components
+    │   ├── About.js
+    │   ├── Alert.js
+    │   ├── Navbar.js
+    │   └── TextForm.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
