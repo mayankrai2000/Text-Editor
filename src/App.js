@@ -4,6 +4,12 @@ import Alert from "./components/Alert";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -40,6 +46,7 @@ function App() {
   };
   return (
     <>
+      <Router>
       <Navbar
         title="Text Editor"
         mode={mode}
@@ -48,9 +55,16 @@ function App() {
       />
       <Alert alert={alert} />
       <div className="container my-3">
-        {/* <About />  */}
-        <TextForm heading="Enter your text to analyze below" mode={mode} showAlert={showAlert}/>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <TextForm heading="Enter your text to analyze below" mode={mode} showAlert={showAlert}/>
+          </Route>
+        </Switch>
       </div>
+      </Router>
     </>
   );
 }
