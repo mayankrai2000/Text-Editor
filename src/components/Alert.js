@@ -6,9 +6,11 @@ function Alert(props) {
         return lower.charAt(0).toUpperCase() + lower.slice(1);
     }
     return (
-        // Below statement is equivalent to. if (props. alert != NULL)
-        props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+        <div style={{height: '50px'}}>
+        {/* Below statement is equivalent to. if (props. alert != NULL) */}
+        {props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
         <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
+        </div>}
         </div>
     );
 }
