@@ -44,16 +44,16 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-3" onClick={handleUpClick}>
+        <button className="btn btn-primary mx-3 my-1" onClick={handleUpClick}>
           Convert to Upper Case
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleLowClick}>
+        <button className="btn btn-primary mx-3 my-1" onClick={handleLowClick}>
           Convert to Lower Case
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleClear}>
+        <button className="btn btn-primary mx-3 my-1" onClick={handleClear}>
           Clear
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleCopy}>
+        <button className="btn btn-primary mx-3 my-1" onClick={handleCopy}>
           Copy
         </button>
       </div>
