@@ -24,6 +24,17 @@ $ npm run build # For production or hosting
 
 -   Open up localhost:3000 and start clicking around.
 
+## :zap: Alternatively you can run project using Dockerfile
+
+-   After installing Docker on your desktop follow the below steps:
+
+```bash
+$ docker build -t text-editor .
+$ docker run -p <HOST_PORT>:3000 text-editor
+```
+
+Now you can Access the application on `http://localhost:<HOST_PORT>`
+
 ## :file_folder: File Structure
 
 -   Add a file structure here with the basic details about files, below is current file structure.
